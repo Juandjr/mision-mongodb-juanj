@@ -24,4 +24,3 @@ En el momento de correr el archivo (read_criaturas.mongodb) este va a ejecutar t
 ## update_criaturas.mongodb
 
 Al ejecutar el archivo (update_criaturas.mongodb) este va a agregar una habilidad a las criaturas que tengan el nombre de "Balatro" y otra funcion que permite aumentar en 1 el "nivel_peligro" de multiples criaturas que compartan un habitad. 
-
