@@ -1,0 +1,24 @@
+// insertar una habilidad 
+use("bestiario");
+db.criaturas.updateOne(
+    { 
+        nombre: "Balatro" }, 
+    { 
+        $push: { 
+            habilidades: "Restar Multiplicadores" 
+        } 
+    }
+);
+
+// Incrementar el nivel de peligro + 1 dependiendo el habitad
+use("bestiario");
+db.criaturas.updateMany(
+    {
+        habitad: "Castillos antiguos"
+    },
+    {
+        $inc: {
+            nivel_peligro: 1
+        }
+    }
+);

@@ -1,0 +1,11 @@
+//Mostrar todas las criaturas
+use("bestiario");
+db.criaturas.find({});
+
+// Busqueda dependiendo el habitad
+use("bestiario");
+db.criaturas.find({habitad: "Castillos antiguos"});
+
+// busqueda a los criaturas con nivel de peligro mayor a 8
+use("bestiario");
+db.criaturas.find({nivel_peligro: {$gte: 8}});

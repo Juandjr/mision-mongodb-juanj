@@ -1,0 +1,70 @@
+use("bestiario");
+db.criaturas.insertOne({
+    nombre: "Balatro",
+    stats: {
+        fuerza: 5,
+        destreza: 7,
+        carisma: 10,
+    },
+    habilidades: ["Bromas pesadas", "Camuflaje social"],
+    habitad: "Ciudades",
+    nivel_peligro: 2,
+});
+use("bestiario");
+db.criaturas.insertMany([
+    {
+        nombre: "Damphir",
+        stats: {
+            fuerza: 8,
+            destreza: 9,
+            carisma: 2,
+        },
+        habilidades: ["Sangre vampírica", "Regeneración rápida"],
+        habitad: "Castillos antiguos",
+        nivel_peligro: 5,
+    },
+    {
+        nombre: "Succubus",
+        stats: {
+            fuerza: 4,
+            destreza: 8,
+            carisma: 10,
+        },
+        habilidades: ["Encanto seductor", "Manipulación emocional"],
+        habitad: "Castillos antiguos",
+        nivel_peligro: 7,
+    },
+    {
+        nombre: "Ghoul",
+        stats: {
+            fuerza: 7,
+            destreza: 5,
+            carisma: 1,
+        },
+        habilidades: ["Devorar carne", "Resistencia a la muerte"],
+        habitad: "Cementerios",
+        nivel_peligro: 4,
+    },
+    {
+        nombre: "Warden",
+        stats: {
+            fuerza: 9,
+            destreza: 6,
+            carisma: 1,
+        },
+        habilidades: ["Guardia implacable", "Fuerza sobrehumana"],
+        habitad: "Ciudades antiguas",
+        nivel_peligro: 10,
+    },
+    {
+        nombre: "qliphoth",
+        stats: {
+            fuerza: 10,
+            destreza: 10,
+            carisma: 1,
+        },
+        habilidades: ["Caos absoluto", "Destrucción total"],
+        habitad: "Ciudades",
+        nivel_peligro: 10,
+    }
+]);
