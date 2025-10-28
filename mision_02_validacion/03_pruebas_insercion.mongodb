@@ -1,0 +1,56 @@
+use("bestiario");
+//funcional guardianes
+db.guardianes.insertOne({
+    nombre: "Civiljuan12",
+    rango: "Gran Maestro",
+    password_acceso: "123456789",
+    nivel: 69,
+    inventario: [
+        { nombre_item: "Poción curativa", cantidad: 5 },
+        { nombre_item: "Escudo mágico", cantidad: 1 }
+    ]
+});
+
+//con error guardianes
+use("bestiario");
+db.guardianes.insertOne({
+    nombre: "Jose Roberto",
+    rango: "Aprendiz",
+    password_acceso: "pass123456",
+    nivel: 120,
+    inventario: [
+        { nombre_item: "Poción curativa", cantidad: 6 },
+        { nombre_item: "Escudo de madera", cantidad: 1 }
+    ]
+});
+// aparece el siguiente error: "Document failed validation"
+
+//funcional criaturas
+use("bestiario");
+db.criaturas.insertOne({
+    nombre: "Gato de la suerte",
+    habitad: "Ciudades",
+    nivel_peligro: 1,
+    es_legendaria: true,
+    habilidades: ["Suerte maxima", "FortunWa inesperada"],
+    ficha_veterinaria: {
+        salud: "Optima",
+        ultima_revision: new Date("2024-05-15")
+    },
+    id_guardian: ObjectId("69014ba90a5a28f5a7bf85ac")
+});
+
+//con error criaturas
+use("bestiario");
+db.criaturas.insertOne({
+    nombre: "Fenix",
+    habitad: "Montañas",
+    nivel_peligro: 11,
+    es_legendaria: true,
+    habilidades: ["Renacer", "Llamas eternas"],
+    ficha_veterinaria: {
+        ultima_revision: new Date("2024-06-01")
+    },
+    id_guardian: ObjectId("69014ba90a5a28f5a7bf85ac")
+});
+// aparece el siguiente error: "Document failed validation"
